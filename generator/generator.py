@@ -20,3 +20,11 @@ def generated_person():
         current_address=faker_ua.address(),
         permanent_address=faker_ua.address(),
     )
+
+
+def generated_file():
+    path = f'/Users/alkalin/al_kalin/auto tests/automation-test-python-example/filetest_{random.randint(0, 999)}.txt'
+    file = open(path, 'w+')
+    file.write(f'Hello World {random.randint(0, 999)}')
+    file.close()
+    return file.name, path
