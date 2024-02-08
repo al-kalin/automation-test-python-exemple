@@ -19,8 +19,8 @@ def generated_person():
         email=faker_ua.email(),
         current_address=faker_ua.address(),
         permanent_address=faker_ua.address(),
+        mobile=faker_ua.msisdn(),
     )
-
 
 def generated_file():
     path = f'/Users/alkalin/al_kalin/auto tests/automation-test-python-example/filetest_{random.randint(0, 999)}.txt'
