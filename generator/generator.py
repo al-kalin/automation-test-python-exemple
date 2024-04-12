@@ -1,6 +1,6 @@
 import random
 
-from data.data import Person
+from data.data import Person, Color
 
 from faker import Faker
 
@@ -22,9 +22,16 @@ def generated_person():
         mobile=faker_ua.msisdn(),
     )
 
+
 def generated_file():
     path = f'/Users/alkalin/al_kalin/auto tests/automation-test-python-example/filetest_{random.randint(0, 999)}.txt'
     file = open(path, 'w+')
     file.write(f'Hello World {random.randint(0, 999)}')
     file.close()
     return file.name, path
+
+
+def generated_color():
+    yield Color(
+        color_name=["Red", "Blue", "Green", "Yellow", "Purple", "Black", "White", "Voilet", "Indigo", "Magenta", "Aqua"]
+    )
